@@ -1,13 +1,19 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import CartButton from './CartButton'; // Importa el componente CartButton
 
 const NavBar = () => {
+  const openCart = () => {
+    // Agrega la lógica para abrir el carrito aquí
+    alert('Carrito de compras abierto');
+  };
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <img
-            src="/logo.png" // Reemplaza con la ruta de tu logo
+            src="/logo.png"
             alt="Logo"
             width="30"
             height="30"
@@ -22,9 +28,7 @@ const NavBar = () => {
             <Nav.Link href="/contacto">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <div className="cart-icon">
-          <i className="fas fa-shopping-cart"></i>
-        </div>
+        <CartButton /> {/* Agrega el componente CartButton aquí */}
       </Container>
     </Navbar>
   );

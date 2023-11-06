@@ -1,11 +1,12 @@
 import React from 'react';
-import NavBar from './NavBar';
+import NavBar from '/Users/Usuario/Desktop/React/react/src/component/NavBar';
 
 function App() {
   return (
     <div>
       <NavBar />
-      {/* Agrega el contenido */}
+    
+      <h1>Hola que tal</h1>
     </div>
   );
 }
