@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { CharacterDetail } from "../CharacterDetail/CharacterDetail";
+import { useParams } from "react-router-dom";
 
 export const CharacterDetailContainer = () => {
-    const [character, setCharacter] = useState(null); 
+    const [character, setCharacter] = useState(null);
+    const  { id } = useParams()
 
     const getCharacter = async (id) => {
         try {
@@ -16,7 +18,7 @@ export const CharacterDetailContainer = () => {
     }
 
     useEffect(() => { 
-        getCharacter(1)
+        getCharacter(id)
      }, [])
 
   return (
