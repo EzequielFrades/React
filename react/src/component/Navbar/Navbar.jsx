@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import CartButton from './CartButton'; // Importa el componente CartButton
-
+import  CartButton  from "../CarButton/Carbutton"
 const NavBar = () => {
   const openCart = () => {
     // Agrega la lógica para abrir el carrito aquí

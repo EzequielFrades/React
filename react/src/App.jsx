@@ -1,14 +1,15 @@
-import React from 'react';
-import NavBar from '/Users/Usuario/Desktop/React/react/src/component/NavBar';
+import React from "react";
+import { Route, Routes} from "react-router-dom"
+import { CharacterListContainer } from "./component/CharacterListContainer/CharacterListContainer";
+import NavBar from "./component/Navbar/Navbar";
+import { CharacterDetailContainer } from "./component/CharacterDeailConteiner/CharacterDetailContainer";
 
-function App() {
-  return (
-    <div>
-      <NavBar />
-    
-      <h1>Hola que tal</h1>
-    </div>
-  );
+export default function App (){
+  return <> 
+    <NavBar/>
+    <Routes>
+    <Route path="/" element={ <CharacterListContainer/>}/>
+    <Route path="/character/:id" element={ <CharacterDetailContainer/>}/>
+  </Routes>
+  </>
 }
-
-export default App;
